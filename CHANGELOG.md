@@ -1,3 +1,18 @@
+## Version 1.1.0
+
+ * Introduce ```peripheral.id```, ```periheral.uuid``` is deprecated now
+ * Initial Windows support via WinUSB and bluetooth-hci-socket
+ * Rework Linux stack to use [bluetooth-hci-socket](https://github.com/sandeepmistry/node-bluetooth-hci-socket)
+ * Clarify notify related API's in read me ([@OJFord](https://github.com/OJFord))
+
+## Version 1.0.2
+
+ * Add mac dummy in binding.pyq ([@DomiR](https://github.com/DomiR))
+ * Fixes for distributed and websocket bindings ([@Loghorn](https://github.com/Loghorn))
+ * OS X Mavericks and legacy: manually emit write event for write without response requests
+ * Update README for packages needed for rpm-based systems ([@ppannuto](https://github.com/ppannuto))
+ * Linux: refresh serviceUuids for incoming advertisement ([@BBarash](https://github.com/BBarash))
+
 ## Version 1.0.1
 
  * correct peripherals not being created correctly

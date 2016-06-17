@@ -1,3 +1,47 @@
+## Version 1.6.0
+
+ * hci-socket binding: use latest bluetooth-hci-socket dependency (~0.4.4)
+ * Added characteristic.subscribe and characteristic.unsubscribe API's (characteristic.notify is now deprecated)
+ * hci-socket binding: use OCF_LE_SET_EVENT_MASK for LE_SET_EVENT_MASK_CMD
+ * hci-socket binding: check READ_LE_HOST_SUPPORTED_CMD status before parsing result
+
+## Version 1.5.0
+
+ * hci-socket binding: add NOBLE_MULTI_ROLE flag for ignoring peripheral role commands ([@popasquat89](https://github.com/bradjc))
+ * Fix variable typo in ```with-bindings.js`` ([@rclai](https://github.com/rclai))
+
+## Version 1.4.0
+
+ * hci-socket binding: include service data UUID's when filtering discover
+ * hci-socket binding: emit scan start/stop when external app changes scanning start ([@bradjc](https://github.com/bradjc))
+ * Support for pluggable bindings ([@hgwood](https://github.com/hgwood))
+ * hci-socket binding: don't kill all descriptors when looking for new Characteristics ([@Neutrosider](https://github.com/Neutrosider))
+
+## Version 1.3.0
+
+ * Check and report LE Create Conn command status
+ * Correct parsing master clock accuracy value from LE Conn Complete event
+ * Added logic to reject rather than ignore unknown requests/commands. ([@george-hawkins](https://github.com/george-hawkins))
+ * Don't reset scan state on read local version response if state is powered on
+ * Expose local adapter address via ```noble.address```, available after ```poweredOn``` state change event
+ * Fix ```serviceUuids``` var check in ```peripheral-explorer.js``` ([@jrobeson](https://github.com/jrobeson))
+
+## Version 1.2.1
+
+ * Use latest v0.4.1 bluetooth-hci-socket dependency (for kernel 4.1.x disconnect workaround)
+ * Add read + write LE host supported commands (for kernel 4.1.x disconnect workaround)
+ * Fix a potential exception when accessing a non existent element ([@Loghorn](https://github.com/Loghorn))
+
+## Version 1.2.0
+
+ * Use v0.4.0 of bluetooth-hci-socket
+ * Ignore peripherals with only connectable flag on OS X 10.10
+ * Bindings no longer init themselves
+ * Fix this._discoveredPeripheralUUids = []; variable not initalized in constructor ([@jacobrosenthal](https://github.com/jacobrosenthal))
+ * New ```peripheral.connectable``` property
+ * Updates to Linux prerequisites in read me
+ * Throw error if scanning is started when state is not powered on
+
 ## Version 1.1.0
 
  * Introduce ```peripheral.id```, ```periheral.uuid``` is deprecated now
